@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人工智能通识教材（农林院校版）</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #2e7d32;
+            border-bottom: 2px solid #2e7d32;
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #1b5e20;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .feature-box {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .chapter-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .chapter-list li {
+            background-color: #f1f8e9;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 5px solid #2e7d32;
+            border-radius: 4px;
+        }
+        .ppt-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .ppt-download {
+            background-color: #c8e6c9;
+            padding: 10px 15px;
+            border-radius: 6px;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+        }
+        .ppt-download a {
+            color: #1b5e20;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+        }
+        .ppt-download a:hover {
+            text-decoration: underline;
+        }
+        .ppt-title {
+            font-size: 0.9em;
+            margin-top: 5px;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            .ppt-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>人工智能通识教材（农林院校版）</h1>
+        <p>构建"人工智能+农业"知识体系，探索智慧农业未来</p>
+    </header>
+    
+    <div class="container">
+        <section id="introduction">
+            <h2>本书简介</h2>
+            <p>本书从农林院校的特色视角出发，系统介绍了人工智能的基础技术及其应用，旨在帮助读者建立清晰的"人工智能 + 农业"的知识框架，并掌握相关技术的基本原理与实践方法。全书共八章，遵循"基础 → 技术应用 → 前沿展望"的逻辑架构编排，循序渐进地引导读者深入理解人工智能的发展趋势、关键技术及智慧农业应用案例。</p>
+            
+            <p>第1章从人工智能与农业的演进历程切入，介绍相关概念、核心特征及关键技术体系，探讨人工智能如何赋能农业现代化。第2章讲解机器学习的基础知识，为后续人工智能技术的学习奠定理论基础。第3～7章详细介绍人工智能的若干关键技术及其应用，包括计算机视觉、大数据分析、物联网、区块链、生物信息学等。每章不仅阐述基础原理，还结合典型案例，展示其在农业生产与管理各环节的应用实践。第8章展望大模型时代的智慧农业，分析人工智能大模型的发展趋势及其对农业智能化的深远影响。</p>
+            
+            <p>本书适用于高等院校农林类、理工类及其他专业有志于学习人工智能和智慧农业关键技术的本科生、研究生，可作为农林院校人工智能通识课程的教材。</p>
+        </section>
+        
+        <section id="features">
+            <h2>本书特色</h2>
+            <div class="feature-box">
+                <h3>1. 通识性与系统性并重</h3>
+                <p>涵盖人工智能基础概念、核心算法等通识讲解，亦提供多个方向关键技术及其实际应用案例的进阶性、系统性介绍。</p>
+                
+                <h3>2. 理论结合实践，贴近农业应用</h3>
+                <p>在阐述人工智能关键技术时，辅以大量农业领域的实际案例，旨在帮助读者结合具体应用场景，深刻理解人工智能技术的应用价值。</p>
+                
+                <h3>3. 循序渐进，适合不同层次读者</h3>
+                <p>内容编排由浅入深，采用模块化设计，既适合初学者入门，也适合具备一定技术基础的读者进行深入学习。</p>
+            </div>
+        </section>
+        
+        <section id="chapters">
+            <h2>教材目录与PPT下载</h2>
+            <ul class="chapter-list">
+                <li>
+                    <strong>第1章 人工智能与农业概述</strong>
+                    <p>介绍人工智能的基本概念、发展历程及其在农业领域的应用前景。</p>
+                    <div class="ppt-container">
+                        <div class="ppt-download">
+                            <a href="ppt/chapter1_part1.pptx">下载PPT</a>
+                            <div class="ppt-title">基础概念篇</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter1_part2.pptx">下载PPT</a>
+                            <div class="ppt-title">农业应用场景</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter1_part3.pptx">下载PPT</a>
+                            <div class="ppt-title">案例研究</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <strong>第2章 机器学习基础</strong>
+                    <p>讲解监督学习、无监督学习和强化学习的基本原理及农业应用案例。</p>
+                    <div class="ppt-container">
+                        <div class="ppt-download">
+                            <a href="ppt/chapter2_part1.pptx">下载PPT</a>
+                            <div class="ppt-title">监督学习</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter2_part2.pptx">下载PPT</a>
+                            <div class="ppt-title">无监督学习</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter2_part3.pptx">下载PPT</a>
+                            <div class="ppt-title">农业应用案例</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <strong>第3章 计算机视觉与农业图像处理</strong>
+                    <p>探讨图像识别、目标检测等技术在作物病虫害识别、果实分级等场景的应用。</p>
+                    <div class="ppt-container">
+                        <div class="ppt-download">
+                            <a href="ppt/chapter3_part1.pptx">下载PPT</a>
+                            <div class="ppt-title">基础技术</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter3_part2.pptx">下载PPT</a>
+                            <div class="ppt-title">病虫害识别</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter3_part3.pptx">下载PPT</a>
+                            <div class="ppt-title">果实分级系统</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <strong>第4章 农业大数据分析与决策</strong>
+                    <p>介绍大数据技术在农业生产预测、精准农业管理中的应用。</p>
+                    <div class="ppt-container">
+                        <div class="ppt-download">
+                            <a href="ppt/chapter4_part1.pptx">下载PPT</a>
+                            <div class="ppt-title">数据采集处理</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter4_part2.pptx">下载PPT</a>
+                            <div class="ppt-title">预测模型</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter4_part3.pptx">下载PPT</a>
+                            <div class="ppt-title">决策支持系统</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <strong>第5章 物联网与智能农业装备</strong>
+                    <p>分析物联网技术在农业环境监测、智能灌溉系统中的应用。</p>
+                    <div class="ppt-container">
+                        <div class="ppt-download">
+                            <a href="ppt/chapter5_part1.pptx">下载PPT</a>
+                            <div class="ppt-title">物联网基础</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter5_part2.pptx">下载PPT</a>
+                            <div class="ppt-title">环境监测</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter5_part3.pptx">下载PPT</a>
+                            <div class="ppt-title">智能灌溉</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <strong>第6章 区块链与农产品溯源</strong>
+                    <p>探讨区块链技术如何保障农产品质量安全与供应链透明。</p>
+                    <div class="ppt-container">
+                        <div class="ppt-download">
+                            <a href="ppt/chapter6_part1.pptx">下载PPT</a>
+                            <div class="ppt-title">区块链原理</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter6_part2.pptx">下载PPT</a>
+                            <div class="ppt-title">溯源系统设计</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter6_part3.pptx">下载PPT</a>
+                            <div class="ppt-title">实际应用案例</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <strong>第7章 生物信息学与智能育种</strong>
+                    <p>介绍人工智能在基因组学分析、分子育种中的应用。</p>
+                    <div class="ppt-container">
+                        <div class="ppt-download">
+                            <a href="ppt/chapter7_part1.pptx">下载PPT</a>
+                            <div class="ppt-title">生物信息学基础</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter7_part2.pptx">下载PPT</a>
+                            <div class="ppt-title">基因组分析</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter7_part3.pptx">下载PPT</a>
+                            <div class="ppt-title">智能育种技术</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <strong>第8章 大模型时代的智慧农业展望</strong>
+                    <p>分析大语言模型、多模态模型等前沿技术对农业智能化的潜在影响。</p>
+                    <div class="ppt-container">
+                        <div class="ppt-download">
+                            <a href="ppt/chapter8_part1.pptx">下载PPT</a>
+                            <div class="ppt-title">大模型技术</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter8_part2.pptx">下载PPT</a>
+                            <div class="ppt-title">农业知识问答</div>
+                        </div>
+                        <div class="ppt-download">
+                            <a href="ppt/chapter8_part3.pptx">下载PPT</a>
+                            <div class="ppt-title">未来展望</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2023 人工智能通识教材编委会 | 农林院校版</p>
+        <p>联系方式：ai_agriculture@example.com</p>
+    </footer>
+</body>
+</html>
