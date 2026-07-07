@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<!-- saved from url=(0024)https://ai4ag.github.io/ -->
+<html lang="zh-CN"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>人工智能通识教程（农林院校版）</title>
+<style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #2e7d32;
+            border-bottom: 2px solid #2e7d32;
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #1b5e20;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .feature-box {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .chapter-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .chapter-list li {
+            background-color: #f1f8e9;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 5px solid #2e7d32;
+            border-radius: 4px;
+        }
+        .ppt-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .ppt-download {
+            background-color: #c8e6c9;
+            padding: 10px 15px;
+            border-radius: 6px;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+        }
+        .ppt-download a {
+            color: #1b5e20;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+        }
+        .ppt-download a:hover {
+            text-decoration: underline;
+        }
+        .ppt-title {
+            font-size: 0.9em;
+            margin-top: 5px;
+            color: #555;
+        }
+        .video-link {
+            margin-top: 15px;
+            padding: 8px 0;
+            font-size: 1em;
+        }
+        .video-link a {
+            color: #1565c0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-link a:hover {
+            text-decoration: underline;
+            color: #0d47a1;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            .ppt-container {
+                flex-direction: column;
+            }
+        }
+        .sibling-course {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 20px;
+            align-items: center;
+            margin: 0 0 28px;
+            padding: 22px 24px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #eef7ff 100%);
+            border: 1px solid #bbdefb;
+            box-shadow: 0 3px 10px rgba(21,101,192,0.08);
+        }
+        .sibling-course .eyebrow {
+            display: inline-block;
+            color: #0d47a1;
+            font-size: .86rem;
+            font-weight: 700;
+            letter-spacing: .06em;
+            margin-bottom: 4px;
+        }
+        .sibling-course h2 {
+            border: 0;
+            margin: 0 0 8px;
+            padding: 0;
+            color: #0d47a1;
+            font-size: 1.42rem;
+        }
+        .sibling-course p {
+            margin: 0;
+            color: #375a7f;
+        }
+        .sibling-course a {
+            display: inline-block;
+            white-space: nowrap;
+            text-decoration: none;
+            background: #1565c0;
+            color: #fff;
+            font-weight: 700;
+            padding: 11px 18px;
+            border-radius: 8px;
+            transition: background-color .2s ease, transform .2s ease;
+        }
+        .sibling-course a:hover {
+            background: #0d47a1;
+            transform: translateY(-1px);
+        }
+        @media (max-width: 768px) {
+            .sibling-course {
+                grid-template-columns: 1fr;
+            }
+            .sibling-course a {
+                text-align: center;
+            }
+        }
+
+        .book-intro-layout {
+            display: grid;
+            grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+            gap: 34px;
+            align-items: start;
+            margin-top: 22px;
+        }
+        .book-cover {
+            margin: 0;
+            padding: 12px;
+            background: linear-gradient(145deg, #f5fbf6, #e7f3ea);
+            border: 1px solid #d4e8d7;
+            border-radius: 12px;
+            box-shadow: 0 10px 24px rgba(27, 94, 32, 0.13);
+            position: sticky;
+            top: 20px;
+        }
+        .book-cover img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 5px 14px rgba(0, 0, 0, 0.16);
+        }
+        .book-cover figcaption {
+            margin-top: 10px;
+            color: #52705a;
+            font-size: 0.88rem;
+            text-align: center;
+        }
+        .book-intro-text p:first-child {
+            margin-top: 0;
+        }
+        .purchase-link {
+            margin-top: 18px;
+            padding: 12px 15px;
+            background: #f1f8e9;
+            border-left: 4px solid #2e7d32;
+            border-radius: 5px;
+        }
+        .purchase-link a {
+            color: #1b5e20;
+            font-weight: 700;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        .purchase-link a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .book-intro-layout {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+            .book-cover {
+                position: static;
+                width: min(78%, 330px);
+                margin: 0 auto;
+            }
+        }
+
+        .book-purchase {
+            margin-top: 22px;
+            padding: 18px 20px;
+            background: linear-gradient(145deg, #f5fbf6, #edf7ef);
+            border: 1px solid #d6ead9;
+            border-radius: 10px;
+        }
+        .book-purchase h3 {
+            margin: 0 0 13px;
+            color: #1b5e20;
+            font-size: 1.08rem;
+        }
+        .book-meta {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 9px 20px;
+            margin: 0;
+        }
+        .book-meta-row {
+            display: grid;
+            grid-template-columns: 4.4em minmax(0, 1fr);
+            align-items: baseline;
+            gap: 4px;
+        }
+        .book-meta dt {
+            margin: 0;
+            color: #52705a;
+            font-weight: 700;
+        }
+        .book-meta dd {
+            margin: 0;
+            color: #263b2b;
+        }
+        .book-purchase .purchase-link {
+            margin: 15px 0 0;
+            padding: 0;
+            background: none;
+            border: none;
+            border-radius: 0;
+        }
+        @media (max-width: 900px) {
+            .book-meta {
+                grid-template-columns: 1fr;
+            }
+        }
+</style>
+<meta content="《人工智能通识教程（农林院校版）》课程主页，提供教材介绍、目录、课程PPT与授课视频等资源。" name="description"/></head>
+<body>
+<header>
+<h1>人工智能通识教程（农林院校版）</h1>
+<p>立足"人工智能+农业"知识框架，构建面向农林院校的人工智能通识课程体系</p>
+</header>
+<div class="container">
+<section id="introduction">
+<h2>本书简介</h2><div class="book-intro-layout"><figure class="book-cover"><img alt="《人工智能通识教程（农林院校版）》教材封面" loading="eager" src="textbook-cover.png"/><figcaption>《人工智能通识教程（农林院校版）》教材封面</figcaption></figure><div class="book-intro-text"><p>本书从农林院校的特色视角出发，系统介绍了人工智能的基础技术及其应用，旨在帮助读者建立清晰的"人工智能 + 农业"的知识框架，并掌握相关技术的基本原理与实践方法。全书共八章，遵循"基础 → 技术应用 → 前沿展望"的逻辑架构编排，循序渐进地引导读者深入理解人工智能的发展趋势、关键技术及智慧农业应用案例。</p><p>第1章从人工智能与农业的演进历程切入，介绍相关概念、核心特征及关键技术体系，探讨人工智能如何赋能农业现代化。第2章讲解机器学习的基础知识，为后续人工智能技术的学习奠定理论基础。第3～7章详细介绍人工智能的若干关键技术及其应用，包括计算机视觉、大数据分析、物联网、区块链、生物信息学等。每章不仅阐述基础原理，还结合典型案例，展示其在农业生产与管理各环节的应用实践。第8章展望大模型时代的智慧农业，分析人工智能大模型的发展趋势及其对农业智能化的深远影响。</p><p>本书适用于高等院校农林类、理工类及其他专业有志于学习人工智能和智慧农业关键技术的本科生、研究生，可作为农林院校人工智能通识课程的教材。</p><div class="book-purchase"><h3>教材信息与购买</h3><dl class="book-meta"><div class="book-meta-row"><dt>书名</dt><dd>人工智能通识教程（农林院校版）</dd></div><div class="book-meta-row"><dt>ISBN</dt><dd>978-7-111-79127-0</dd></div><div class="book-meta-row"><dt>主编</dt><dd>黄栋、张红雨、舒磊</dd></div><div class="book-meta-row"><dt>出版社</dt><dd>机械工业出版社</dd></div></dl><p class="purchase-link">购买链接（京东）：<a href="https://item.jd.com/15142564.html" rel="noopener noreferrer" target="_blank">https://item.jd.com/15142564.html</a></p></div></div></div>
+</section>
+<section id="features">
+<h2>本书特色</h2>
+<div class="feature-box">
+<h3>1. 通识性与系统性并重</h3>
+<p>涵盖人工智能基础概念、核心算法等通识讲解，亦提供多个方向关键技术及其实际应用案例的进阶性、系统性介绍。</p>
+<h3>2. 理论结合实践，贴近农业应用</h3>
+<p>在阐述人工智能关键技术时，辅以大量农业领域的实际案例，旨在帮助读者结合具体应用场景，深刻理解人工智能技术的应用价值。</p>
+<h3>3. 循序渐进，适合不同层次读者</h3>
+<p>内容编排由浅入深，采用模块化设计，既适合初学者入门，也适合具备一定技术基础的读者进行深入学习。</p>
+</div>
+</section>
+<section id="chapters">
+<h2>教材目录与PPT下载</h2>
+<p>（有开课需求的单位，请发邮件至 ai4agr@163.com 索取完整版PPT文件和授课视频等相关资源，并附教材选用信息与必要佐证）</p>
+<ul class="chapter-list">
+<li>
+<strong>第1章 绪论</strong>
+<p>本章概述农业技术的发展历程，从刀耕火种到现代化智慧农业，探讨农业如何在不同时期科学技术的推动下不断演进，并深刻影响社会经济发展。聚焦人工智能与农业的结合，并探讨智慧农业的主要概念、发展趋势及关键技术。本章力求提供对智慧农业的整体认知框架，并为后续章节的进一步学习打下基础。</p>
+<div class="ppt-container">
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/1%20%E7%BB%AA%E8%AE%BA.pdf">下载PPT</a>
+<div class="ppt-title">第1章</div>
+</div>
+</div>
+<div class="video-link">
+                        授课视频：<a href="https://www.bilibili.com/video/BV1tMadzTEQw/?vd_source=ea740b79937169cf330d676131a4f86a">第一次课（第1章 绪论），从《2001太空漫步》讲起</a>
+</div>
+</li>
+<li>
+<strong>第2章 机器学习基础</strong>
+<p>本章首先介绍机器学习的基本概念，讲解其关键要素，包括模型、学习准则和优化算法。阐述农业应用中常见的分类、回归、聚类等算法模型，并探讨集成学习、强化学习、多模态学习和迁移学习等前沿方向。</p>
+<div class="ppt-container">
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/2.1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.pdf">下载PPT</a>
+<div class="ppt-title">第2章（一）</div>
+</div>
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/2.2%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%B8%B8%E8%A7%81%E6%A8%A1%E5%9E%8B.pdf">下载PPT</a>
+<div class="ppt-title">第2章（二）</div>
+</div>
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/2.3%20%E4%BB%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%88%B0%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0.pdf">下载PPT</a>
+<div class="ppt-title">第2章（三）</div>
+</div>
+</div>
+<div class="video-link">
+                        授课视频(1)：<a href="https://www.bilibili.com/list/1633139735/?sid=4952695&amp;spm_id_from=333.1387.0.0&amp;oid=115185956228414&amp;bvid=BV1gyHvzdEHt">第二次课（上），机器学习的基本概念</a>，<a href="https://www.bilibili.com/list/1633139735/?sid=4952695&amp;spm_id_from=333.1387.0.0&amp;oid=115185972938755&amp;bvid=BV1DCHvzxESG">第二次课（下），机器学习的本质是什么？</a>
+</div>
+<div class="video-link">
+                        授课视频(2)：<a href="https://www.bilibili.com/list/1633139735/?spm_id_from=333.1387.0.0&amp;oid=115224812259623&amp;bvid=BV1iypizBENp">第三次课（上），机器学习的任务分类和学习准则</a>，<a href="https://www.bilibili.com/list/1633139735/?spm_id_from=333.1387.0.0&amp;oid=115224812195525&amp;bvid=BV1LypizBEEp">第三次课（下），机器学习的优化算法</a>
+</div>
+<div class="video-link">
+                        授课视频(3)：<a href="https://ai4ag.github.io/">第四次课（上），为何走向深度？</a>，<a href="https://ai4ag.github.io/">第四次课（下），机器学习收篇，视觉、大数据、物联网等后续章节预览</a>
+</div>
+</li>
+<li>
+<strong>第3章 计算机视觉：天光云影</strong>
+<p>本章介绍计算机视觉在农业中的核心应用，讲解图像分类、目标检测、目标跟踪和实例分割等关键技术，并结合苹果叶片病害诊断、肉牛行为识别、牲畜生长监测等实际案例，帮助读者理解如何将计算机视觉技术应用到农业生产的不同环节。</p>
+<div class="ppt-container">
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/3.1%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%201-2%E8%AF%BE%E6%97%B6-%E6%A6%82%E8%BF%B0%E5%92%8C%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%9F%BA%E7%A1%80.pdf">下载PPT</a>
+<div class="ppt-title">第3章（一）</div>
+</div>
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/3.2%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%203-4%E8%AF%BE%E6%97%B6-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80.pdf">下载PPT</a>
+<div class="ppt-title">第3章（二）</div>
+</div>
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/3.3%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%205-6%E8%AF%BE%E6%97%B6-%E5%9B%9B%E5%A4%A7%E5%BA%94%E7%94%A8.pdf">下载PPT</a>
+<div class="ppt-title">第3章（三）</div>
+</div>
+</div>
+</li>
+<li>
+<strong>第4章 大数据分析：吹沙到金</strong>
+<p>本章介绍农业大数据的采集、清洗、存储和分析方法，并详细讲解数据分类、聚类、预测分析、知识图谱和可视化等关键技术。通过农产品市场预测、养殖规划、辅助定价、精准推荐等真实案例分析，讲解大数据如何赋能农业生产决策。</p>
+<div class="ppt-container">
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/4.1%20%20%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%901.pdf">下载PPT</a>
+<div class="ppt-title">第4章（一）</div>
+</div>
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/4.2%20%20%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%902.pdf">下载PPT</a>
+<div class="ppt-title">第4章（二）</div>
+</div>
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/4.3%20%20%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%903.pdf">下载PPT</a>
+<div class="ppt-title">第4章（三）</div>
+</div>
+</div>
+</li>
+<li>
+<strong>第5章 物联网：万物互联</strong>
+<p>本章介绍物联网的主要架构，包括感知层、传输层和应用层，重点探讨物联网信息感知、信息传输、网络中间件等概念与技术，并结合太阳能杀虫灯物联网、光伏农场物联网等应用案例，系统展示农业物联网如何提升农业生产效率、优化资源配置，以及推动农业向绿色、可持续方向发展。</p>
+<div class="ppt-container">
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/5%20%E7%89%A9%E8%81%94%E7%BD%91.pdf">下载PPT</a>
+<div class="ppt-title">第5章</div>
+</div>
+</div>
+</li>
+<li>
+<strong>第6章 区块链：云中锦书</strong>
+<p>本章首先介绍区块链的基本概念和技术特性，包括共识机制、智能合约、加密算法等，并探讨区块链在农产品溯源、农业供应链金融和农业保险中的应用。结合案例分析，讲解区块链在保障农产品质量安全、提升农业供应链透明度和信用体系建设上的作用。</p>
+<div class="ppt-container">
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/6%20%E5%8C%BA%E5%9D%97%E9%93%BE.pdf">下载PPT</a>
+<div class="ppt-title">第6章</div>
+</div>
+</div>
+</li>
+<li>
+<strong>第7章 生物信息学：见微知著</strong>
+<p>本章介绍农业组学、农业生物数据库、农业知识工程等核心概念，重点探讨生物信息技术如何在农作物育种、畜禽选育等领域发挥重要作用，并结合育种案例，分析农业生物信息学的应用现状和未来发展趋势。</p>
+<div class="ppt-container">
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/7%20%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6.pdf">下载PPT</a>
+<div class="ppt-title">第7章</div>
+</div>
+</div>
+</li>
+<li>
+<strong>第8章 大模型时代的智慧农业</strong>
+<p>本章介绍人工智能大模型的发展历程、应用方式、模型幻觉等，探讨其在农业中的潜在应用，并展望大模型时代下智慧农业的未来发展路径。</p>
+<div class="ppt-container">
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/8.1%20%E5%A4%A7%E6%A8%A1%E5%9E%8B1-%E6%A6%82%E8%BF%B0%E5%92%8C%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86.pdf">下载PPT</a>
+<div class="ppt-title">第8章（一）</div>
+</div>
+<div class="ppt-download">
+<a href="https://ai4ag.github.io/8.2%20%E5%A4%A7%E6%A8%A1%E5%9E%8B2-%E5%BA%94%E7%94%A8%E6%96%B9%E6%B3%95%E5%92%8C%E5%AE%89%E5%85%A8%E4%BC%A6%E7%90%86.pdf">下载PPT</a>
+<div class="ppt-title">第8章（二）</div>
+</div>
+</div>
+</li>
+</ul>
+</section>
+<section aria-label="同系列教材推荐" class="sibling-course" style="margin-top: 42px; margin-bottom: 0;"><div><span class="eyebrow">同系列教材 · 新页面</span><h2>人工智能通识教程（公共课版）</h2><p>面向全校不同专业学生，覆盖基础认知、技术领域与大模型前沿。</p></div><a href="https://ai4ge.github.io/" rel="noopener noreferrer" target="_blank">访问课程主页</a></section></div>
+<footer>
+<p>© 2025 人工智能通识教程 | 农林院校版</p>
+<p>联系方式：ai4agr@163.com</p>
+</footer>
+</body></html>
